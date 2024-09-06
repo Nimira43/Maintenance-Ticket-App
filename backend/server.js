@@ -7,4 +7,6 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'This is the Maintenance Ticket App'})
 })
 
+app.use('/api/users', require('./routes/userRoutes'))
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
